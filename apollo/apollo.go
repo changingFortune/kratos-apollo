@@ -82,7 +82,7 @@ func NewSource(opts ...Option) config.Source {
 	if op.backPath == "" {
 		op.backPath = "cache"
 	}
-
+	
 	client, err := agollo.StartWithConfig(func() (*apolloConfig.AppConfig, error) {
 		return &apolloConfig.AppConfig{
 			AppID:          op.appid,
@@ -97,7 +97,7 @@ func NewSource(opts ...Option) config.Source {
 	if err != nil {
 		panic(err)
 	}
-
+	
 	// check have dir path
 	absPath,_ :=filepath.Abs("")
 	thePath := filepath.Join(absPath,op.backPath)

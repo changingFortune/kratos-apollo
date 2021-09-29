@@ -1,4 +1,4 @@
-module github.com/changingFortune/kratos-apollo/v1
+module github.com/changingFortune/kratos-apollo
 
 go 1.15
 
