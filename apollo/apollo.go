@@ -66,6 +66,12 @@ func WithSecret(secret string) Option {
 	}
 }
 
+// WithNamespace with apollo namesapce,and split by ','
+func WithNamespace(namespace string) Option {
+	return func(o *options) {
+		o.namespace = namespace
+	}
+}
 // WithBackPath with apollo config cach backpath
 func WithBackPath(backPath string) Option {
 	return func(o *options) {
